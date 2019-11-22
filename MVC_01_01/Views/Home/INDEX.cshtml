@@ -1,0 +1,38 @@
+﻿@using MVC_01_01.Models
+@model List<Issue>
+@{
+    ViewBag.Title = "View";
+}
+<h2>INDEX</h2>
+<div>
+    <table>
+        <caption>2019-11-22 데이터베이스 접근 데이터 출력</caption>
+        <thead>
+            <tr>
+                <th>REG_DT</th>
+                <th>FAC_CD</th>
+                <th>TECH_CD</th>
+                <th>LOT_CD</th>
+                <th>SYB_GB</th>
+                <th>WEEK</th>
+                <th>HP</th>
+                <th>MP</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.REG_DT</td>
+                    <td>@item.FAC_CD</td>
+                    <td>@item.TECH_CD</td>
+                    <td>@item.LOT_CD</td>
+                    <td>@item.SYB_GB</td>
+                    <td>@item.WEEK</td>
+                    <td>@item.HP</td>
+                    <td>@item.MP</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
